@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require('tailwindcss/plugin');
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -8,5 +11,21 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    plugin(
+      function ({ addVariant }) {
+        addVariant('glow', '.glow-capture .glow-overlay &');
+      },
+      {
+        theme: {
+          extend: {
+            colors: {
+              glow: 'color-mix(in srgb, var(--glow-color) calc(<alpha-value> * 100%), transparent)',
+            },
+          },
+        },
+      }
+    ),
+  ],
 };

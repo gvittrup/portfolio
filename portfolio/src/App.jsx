@@ -9,7 +9,8 @@ import NavDown from './components/NavDown'
 
 // Views
 import LandingPage from './views/LandingPage'
-
+import AboutMe from './views/AboutMe'
+import Skills from './views/Skills'
 
 // Transition Images
 import layer1 from './assets/backgrounds/layer1.svg'
@@ -34,14 +35,14 @@ function App() {
         <Spacer image={layer1} />
 
         <section id='aboutMe' ref={aboutRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center bg-slate-200 text-black text-4xl'>
-          <div className='flex justify-center items-center w-full h-full'>2</div>
+          <AboutMe />
           <NavDown section='about' next='skills' ref={skillsRef}/>
         </section>
         
         <Spacer image={layer2} />
         
-        <section id='skills' ref={skillsRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center bg-slate-800 text-black text-4xl'>
-          <div className='flex justify-center items-center w-full h-full'>3</div>
+        <section id='skills' ref={skillsRef} className='flex flex-col w-screen h-screen snap-center bg-slate-800 text-black text-4xl'>
+          <Skills />
           <NavDown section='skills' next='projects' ref={projectsRef}/>
         </section>
         
