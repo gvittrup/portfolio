@@ -1,8 +1,6 @@
 import { useState, useRef } from 'react'
 import './App.css'
 
-import { FaChevronDown } from 'react-icons/fa';
-
 // Components
 import Spacer from './components/Spacer'
 import NavDown from './components/NavDown'
