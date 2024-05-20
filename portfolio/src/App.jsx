@@ -6,9 +6,10 @@ import Spacer from './components/Spacer'
 import NavDown from './components/NavDown'
 
 // Views
-import LandingPage from './views/LandingPage'
+import Landing from './views/Landing'
 import AboutMe from './views/AboutMe'
 import Skills from './views/Skills'
+import Projects from './views/Projects'
 
 // Transition Images
 import layer1 from './assets/backgrounds/layer1.svg'
@@ -26,7 +27,7 @@ function App() {
     <>
       <div name='container' className='w-screen h-screen snap-mandatory snap-y overflow-scroll -z-50'>
         <section id='heroSection' ref={landingRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center  text-black text-4xl -z-25'>
-          <LandingPage />
+          <Landing />
           <NavDown section='landing' next='about me' ref={aboutRef}/>
         </section>
 
@@ -47,7 +48,8 @@ function App() {
         <Spacer image={layer3} />
         
         <section id='projects' ref={projectsRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center bg-slate-200 text-black text-4xl'>
-          <div className='flex justify-center items-center w-full h-full'>4</div>
+          <Projects />
+          <NavDown section='skills' next='projects' ref={projectsRef}/>
         </section>
         
         <section id='activeProject' ref={activeProjectRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center bg-green-300 text-black text-4xl'>

@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react';
 // Components
 import NavDown from '../components/NavDown'
 
-const LandingPage = ({ next }) => {
+const Landing = ({ next }) => {
 
     return (
         <>
@@ -15,4 +15,4 @@ const LandingPage = ({ next }) => {
     )
 }
 
-export default LandingPage;
+export default Landing;
