@@ -1,6 +1,9 @@
 import { useState, useRef } from 'react'
 import './App.css'
 
+// Context
+import { ProjectContext } from './context/ActiveProject'
+
 // Components
 import Spacer from './components/Spacer'
 import NavDown from './components/NavDown'
@@ -15,6 +18,7 @@ import Projects from './views/Projects'
 import layer1 from './assets/backgrounds/layer1.svg'
 import layer2 from './assets/backgrounds/layer2.svg'
 import layer3 from './assets/backgrounds/layer3.svg'
+import Project from 'surge/lib/middleware/project'
 
 function App() {
   const landingRef = useRef(null);
@@ -47,15 +51,14 @@ function App() {
         
         <Spacer image={layer3} />
         
-        <section id='projects' ref={projectsRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center bg-slate-200 text-black text-4xl'>
+        <section id='projects' ref={projectsRef} className='flex flex-col justify-center items-center w-screen snap-start bg-slate-200 text-black text-4xl'>
           <Projects />
           <NavDown section='skills' next='projects' ref={projectsRef}/>
         </section>
         
-        <section id='activeProject' ref={activeProjectRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center bg-green-300 text-black text-4xl'>
-          <div className='flex justify-center items-center w-full h-full'>5</div>
-          <NavDown section='activeProject' next='home' ref={landingRef}/>
-        </section>
+        {/* <ProjectContext>
+
+        </ProjectContext> */}
       </div>
     </>
   )
