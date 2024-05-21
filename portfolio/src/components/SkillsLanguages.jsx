@@ -13,26 +13,32 @@ const SkillsLanguages = () => {
     const cname = 'flex justify-center items-center w-full h-full mx-5 my-5 text-white'
     const languages = [
         {
+            key: 'csharp', 
             language: <SiCsharp className={cname} />,
             skill: 'C#',
         },
         {
+            key: 'css',
             language: <FaCss3Alt className={cname} />,
             skill: 'CSS',
         },
         {
+            key: 'html',
             language: <FaHtml5 className={cname} />,
             skill: 'HTML',
         },
         {
+            key: 'java',
             language: <FaJava className={cname} />,
             skill: 'Java',
         },
         {   
+            key: 'javascript',
             language: <RiJavascriptFill className={cname} />,
             skill: 'JavaScript'
         },
         {
+            key: 'python',
             language: <FaPython className={cname} />,
             skill: 'Python',
         },
@@ -51,7 +57,7 @@ const SkillsLanguages = () => {
             <FaChevronRight className='text-white min-w-8 min-h-8' />
             {
                 languages.map((language, index) => {
-                    return <SkillsCard icon={language.language} skill={language.skill} delay={index * 0.2} />
+                    return <SkillsCard key={language.key} icon={language.language} skill={language.skill} delay={index * 0.2} />
                 })
             }
         </motion.div>

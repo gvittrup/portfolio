@@ -12,28 +12,32 @@ const SkillsSoftware = () => {
     const cname = 'flex justify-center items-center w-full h-full mx-5 my-5 text-white'
     const softwares = [
         {
+            key: 'adobe',
             software: <SiAdobe className={cname} />,
             skill: 'Adobe Suite',
         },
         {
+            key: 'blender',
             software: <SiBlender className={cname} />,
             skill: 'Blender'
         },
         {
-           
+           key: 'unity',
             software: <FaUnity className={cname} />,
             skill: 'Unity',
         },
         {   
+            key: 'unrealengine',
             software: <SiUnrealengine className={cname} />,
             skill: 'Unreal Engine'
         },
         {
-            
+            key: 'visualstudio',
             software: <SiVisualstudio className={cname} />,
             skill: 'Visual Studio',
         },
-        {   
+        { 
+            key: 'xcode',  
             software: <SiXcode className={cname} />,
             skill: 'Xcode'
         }            
@@ -52,7 +56,7 @@ const SkillsSoftware = () => {
             <FaChevronRight className='text-white min-w-8 min-h-8' />
             {
                 softwares.map((software, index) => {
-                    return <SkillsCard icon={software.software} skill={software.skill} delay={index * 0.2} />
+                    return <SkillsCard key={software.key} icon={software.software} skill={software.skill} delay={index * 0.2} />
                 })
             }
         </motion.div>

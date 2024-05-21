@@ -3,7 +3,7 @@ import React from 'react'
 // Components
 import ProjectCard from '../components/ProjectCard'
 
-const Projects = () => {
+const AllProjects = () => {
 
     const projects = [
         {
@@ -17,6 +17,12 @@ const Projects = () => {
             id: 'aquasaurious',
             description: 'Game developed as fun side project with focus of mobile app development and deployment, secure login and persistence, and 3D mathematics.',
             skills: 'C#, Blender, Unity',
+        },
+        {
+            title: 'HYV',
+            id: 'hyv',
+            description: '',
+            skills: 'C++, Blender, Unreal Engine',
         },
         {
             title: 'HP Dune',
@@ -40,10 +46,10 @@ const Projects = () => {
 
     return(
         <>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mx-36 lg:mx-36 2xl:mx-48 3xl:mx-96 my-24'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mx-12 lg:mx-36 2xl:mx-48 3xl:mx-96 my-24'>
                 {
                     projects.map((project, index) => {
-                        return <ProjectCard project={project} />
+                        return <ProjectCard key={project.id} project={project} />
                     })
                 }
             </div>
@@ -51,4 +57,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default AllProjects

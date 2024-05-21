@@ -13,7 +13,7 @@ const SkillsCard = ({ icon, skill, delay }) => {
                     opacity: 1,
                     x: 0             
                 }}
-                transition={{ duration: 1, delay: delay }}
+                transition={{ duration: 1, delay: delay, type: 'spring' }}
                 >
                 {icon}
             </motion.div>
