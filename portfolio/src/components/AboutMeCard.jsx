@@ -56,7 +56,7 @@ const AboutMeCard = () => {
                     </p>
                 </div>
                 <div name='divider' className='w-3/4 h-1 bg-zinc-100 rounded-full'></div>
-                <div name='social'>
+                <div name='social' className='flex justify-center w-3/4'>
                     <SocialMediaBar />
                 </div>
                 <div className='glow-overlay' style={{'--glow-color': '#7c3aed'}}></div>
