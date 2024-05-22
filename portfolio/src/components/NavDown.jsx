@@ -21,7 +21,7 @@ const NavDown = forwardRef(( {section, next}, ref ) => {
         {        
             section === 'landing' ? (
                 <div className='flex flex-col justify-end items-center w-screen h-screen mb-10'>
-                    <button className='w-1/4 bg-transparent' onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}>
+                    <button className='w-1/2 bg-transparent' onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}>
                         <div className='flex justify-center mb-4 text-3xl lowercase text-zinc-100 drop-shadow-xl'>
                             {next}
                         </div>
@@ -32,7 +32,7 @@ const NavDown = forwardRef(( {section, next}, ref ) => {
                 </div>
             ) : ( section === 'activeProject' ? (
                 <div className='flex flex-col justify-end items-center w-screen mb-10'>
-                    <button className='w-1/4 bg-transparent' onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}>
+                    <button className='w-1/2 bg-transparent' onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}>
                         <div className='flex justify-center mb-4 text-3xl lowercase text-zinc-100 drop-shadow-xl'>
                             {next}
                         </div>
@@ -43,7 +43,7 @@ const NavDown = forwardRef(( {section, next}, ref ) => {
                 </div>
                 ) : (
                     <div className='flex flex-col justify-end items-center w-screen h-full mb-10'>
-                        <button className='w-1/4 bg-transparent' onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}>
+                        <button className='w-1/2 bg-transparent' onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}>
                             <div className='flex justify-center mb-4 text-3xl lowercase text-zinc-100 drop-shadow-xl'>
                                 {next}
                             </div>

@@ -44,7 +44,7 @@ const SkillsFrameworks = () => {
     ]
 
     return(
-        <motion.div className='flex flex-row items-center gap-5 ml-36 my-8'
+        <motion.div className='flex flex-row flex-wrap justify-center items-center gap-5  mx-16 md:mx-auto'
             initial={{
                 opacity: 0,
             }}
@@ -53,7 +53,6 @@ const SkillsFrameworks = () => {
             }}
             transition={{ duration: 1 }}
             >
-            <FaChevronRight className='text-white min-w-8 min-h-8' />
             {
                 tools.map((tool, index) => {
                     return <SkillsCard key={tool.key} icon={tool.tool} skill={tool.skill} delay={index * 0.2} />

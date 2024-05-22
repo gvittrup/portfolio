@@ -7,7 +7,7 @@ import AboutMeCard from '../components/AboutMeCard';
 const AboutMe = () => {
     return (
         <>
-            <motion.div className='flex justify-center items-center w-full h-full my-24'
+            <motion.div className='flex justify-center items-center w-full h-full'
                 initial={{
                     opacity: 0,
                     y: 75

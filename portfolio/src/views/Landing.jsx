@@ -36,7 +36,7 @@ const Landing = ({ next }) => {
 
     return (
         <>
-            <div name='landingPage' className='flex flex-col justify-center items-center w-screen h-screen bg-slate-500 uppercase font-bold text-4xl lg:text-6xl xl:text-8xl -z-10 absolute bg-fixed'>
+            <div name='landingPage' className='flex flex-col justify-center items-center w-screen h-screen bg-slate-500 uppercase font-bold text-3xl lg:text-6xl xl:text-8xl -z-10 absolute bg-fixed'>
                 <p style={{ lineHeight: 0 }} className='intro-title text-indigo-200 uppercase overflow-y'>Gunnar Vittrup</p>
                 <p style={{ lineHeight: 0 }} className='intro-title text-zinc-100 uppercase overflow-y'>Full-stack Developer</p>
                 <p style={{ lineHeight: 0 }} className='intro-title text-zinc-100 uppercase overflow-y'>Content Creator</p>
