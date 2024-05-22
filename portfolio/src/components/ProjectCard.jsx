@@ -2,13 +2,15 @@ import React, { useContext  } from 'react'
 import { motion } from 'framer-motion'
 import { ProjectContext } from '../context/ProjectContext'
 
+import { FaChevronDown } from 'react-icons/fa'
+
 const ProjectCard = ({ project }) => {
 
     const { setActiveProject } = useContext(ProjectContext);
 
     return (
         <>
-            <motion.button id={project.id} className='flex flex-col justify-center w-full min-w-96 min-h-64 lg:min-h-80 bg-black/30 rounded-3xl border-white hover:border-pink-400 hover:animate-pulse border-2 hover:border-4 drop-shadow-2xl'
+            <motion.button id={project.id} className='flex flex-col items-stretch w-full h-2/3 min-w-96 min-h-64 text-white lg:min-h-80 bg-black/30 rounded-3xl border-white hover:border-indigo-200 hover:text-sky-200 hover:animate-pulse border-2 hover:border-4 shadow-2xl group'
                 initial={{
                     opacity: 0,
                     y: 75
@@ -28,22 +30,21 @@ const ProjectCard = ({ project }) => {
                 transition={{ duration: 1 }}
                 onClick={() => setActiveProject(project.id)}
                 >
-                    <div name='header' className='flex mt-2 items-center justify-between w-full'>
-                        <div name='title' className='flex mx-5 text-white text-2xl xl:text-4xl uppercase font-bold'>
-                            {project.title}
-                        </div>
-                        <div name='skills' className='flex mx-5 text-white text-base xl:text-xl uppercase font-thin'>
-                            {project.skills}
-                        </div>
+                    <div name='title' className='flex flex-start text-left mx-5 text-2xl xl:text-4xl uppercase font-bold'>
+                        {project.title}
                     </div>
-                    <div className='flex items-center justify-center'>
-                        <div name='divider' className='flex justify-center w-full h-1 mx-5 my-3 bg-zinc-100 rounded-full'></div>
+                    <div name='skills' className='flex text-left mx-5 text-zinc-100 text-base xl:text-xl uppercase font-light'>
+                        {project.skills}
                     </div>
-                    <div name='description' className='flex justify-center'>
-                        <p className='text-white text-left text-xl xl:text-2xl font-normal mx-5 px-5 mb-2'>
+                    <div name='divider' className='flex w-full h-1 my-3 mx-auto bg-zinc-100 rounded-full'></div>
+                    <div name='description' className='flex h-full justify-center overflow-auto'>
+                        <p className='text-white text-left text-xl xl:text-2xl font-normal mx-3 px-3 mb-2'>
                             {project.description}
                         </p>
-                    </div>                
+                    </div>
+                    <div className='flex w-full h-1/4 justify-center items-center'>
+                        <FaChevronDown className='flex w-6 h-full mx-auto mb-3 text-white group-hover:animate-bounce'/>    
+                    </div>
             </motion.button>
         </>
     )

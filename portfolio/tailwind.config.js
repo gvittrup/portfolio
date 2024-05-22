@@ -11,6 +11,11 @@ export default {
       },
     },
   },
+  variants: {
+    extend: {
+      display: ['group-hover'],
+    },
+  },
   plugins: [
     require('@tailwindcss/typography'),
     plugin(

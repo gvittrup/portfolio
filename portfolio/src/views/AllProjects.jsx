@@ -19,12 +19,6 @@ const AllProjects = () => {
             skills: 'C#, Blender, Unity',
         },
         {
-            title: 'HYV',
-            id: 'hyv',
-            description: '',
-            skills: 'C++, Blender, Unreal Engine',
-        },
-        {
             title: 'HP Dune',
             id: 'hp-dune',
             description: 'Senior design project for HP that consisted of creating an API to parse, persist, and visualize firmware metrics.',
@@ -33,20 +27,26 @@ const AllProjects = () => {
         {
             title: 'Brave Virutal Worlds',
             id: 'brave',
-            description: '',
+            description: 'Member in designing data-pipeline for processing user inputs to normalize and control character behavior and movements within virtual space.',
             skills: 'C#, Python, Swift, AWS, Unity, Xcode',
+        },
+        {
+            title: 'HYV',
+            id: 'hyv',
+            description: 'Individual product design for the Idaho Entrepreneur Challenge, with year-long focus towards asset development, revenue forecasting and modeling, and VR deployment.',
+            skills: 'C++, Blender, Unreal Engine',
         },
         {
             title: 'Mobile XR',
             id: 'mobile-xr',
-            description: '',
+            description: 'Interactive and engaging experiences designed in Unity to utilize augmented and virtual reality on a mobile device.',
             skills: 'C#, Unity',
         }
     ]
 
     return(
         <>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mx-12 lg:mx-36 2xl:mx-48 3xl:mx-96 my-24'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 mx-12 lg:mx-36 2xl:mx-48 3xl:mx-96 my-24'>
                 {
                     projects.map((project, index) => {
                         return <ProjectCard key={project.id} project={project} />
