@@ -29,9 +29,13 @@ function App() {
 
   const { project } = useProject();
 
+  useEffect(() => {
+    landingRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [landingRef])
+
   return (
     <Project >
-      <div name='container' className='w-screen h-screen snap-mandatory snap-y overflow-scroll overflow-x-hidden -z-50'>
+      <div name='container' className='w-screen h-screen snap-mandatory snap-y overflow-scroll overscroll-x-none overflow-x-hidden -z-50'>
         <section id='heroSection' ref={landingRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center -z-25'>
           <Landing />
           <NavDown section='landing' next='about me' ref={aboutRef}/>

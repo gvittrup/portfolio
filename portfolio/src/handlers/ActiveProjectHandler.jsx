@@ -33,12 +33,12 @@ const ActiveProjectHandler = forwardRef(( {}, ref ) => {
     ])
 
     const spacerMap = new Map([
-        ['mokelumne', layer1],
+        ['mokelumne', layer2],
         ['aquasaurious', layer2],
-        ['hyv', layer3],
-        ['hp-dune', layer1],
+        ['hyv', layer2],
+        ['hp-dune', layer2],
         ['brave', layer2],
-        ['mobile-xr', layer3]
+        ['mobile-xr', layer2]
     ])
 
     // Context
@@ -59,7 +59,7 @@ const ActiveProjectHandler = forwardRef(( {}, ref ) => {
                 <Spacer image={spacerMap.get(project)} />
                 <section id='activeProject' ref={activeProjectRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center'>
                     {projectMap.get(project)}
-                    <NavDown section='activeProject' next='home' ref={homeRef} />
+                    {/* <NavDown section='activeProject' next='home' ref={homeRef} /> */}
                 </section>
             </>
         ) : (
