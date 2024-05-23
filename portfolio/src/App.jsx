@@ -50,7 +50,7 @@ function App() {
         
         <Spacer image={layer2} />
         
-        <section id='skills' ref={skillsRef} className='flex flex-col w-screen h-screen snap-center bg-slate-800'>
+        <section id='skills' ref={skillsRef} className='flex flex-col w-screen h-sceen snap-center bg-slate-800'>
           <Skills />
           <NavDown section='skills' next='projects' ref={projectsRef}/>
         </section>

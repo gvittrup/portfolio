@@ -51,7 +51,7 @@ const AboutMeCard = () => {
                 </div>
                 <div name='description' className='flex w-3/4 my-5 text-md md:text-xl text-white'>
                     <p>
-                        I'm Gunnar, a{' '}<a className='text-sky-300 font-bold'>full-stack developer</a>. 
+                        I'm Gunnar, a{' '}<a className='text-indigo-200 font-bold'>full-stack developer</a>. 
                         Outside of coding, I enjoy spending my time outside, hanging out with friends, and creating content. 
                     </p>
                 </div>
