@@ -42,7 +42,7 @@ const AboutMeCard = () => {
 
     return (
         <div className='flex justify-center relative glow-capture'>
-            <div className='group flex flex-col justify-center items-center w-full h-full min-h-80 mx-6 md:mx-64 md:my-24 bg-black/30 rounded-3xl border-4 border-white/5 drop-shadow-xl glow glow:ring-1 glow:border-glow glow:ring-glow glow:bg-glow/[.15]'>
+            <div className='group flex flex-col justify-center items-center w-full h-full min-h-80 mx-6 md:mx-64 lg:mx-96 md:my-24 bg-black/30 rounded-3xl border-4 border-white/5 drop-shadow-xl glow glow:ring-1 glow:border-glow glow:ring-glow glow:bg-glow/[.15]'>
                 <div name='picture' className='flex justify-top my-8'>
                     <img src={Picture} alt='Gunnar Vittrup' className='object-cover w-40 md:w-48 h-40 md:h-48 rounded-full border-4 border-white/5 shadow-inner'/>
                 </div>
@@ -51,7 +51,7 @@ const AboutMeCard = () => {
                 </div>
                 <div name='description' className='flex w-3/4 my-5 text-md md:text-xl text-white'>
                     <p>
-                        I'm Gunnar, a{' '}<a className='text-sky-300 font-bold'>full-stack developer</a>. 
+                        I'm Gunnar, a{' '}<a className='text-indigo-200 font-bold'>full-stack developer</a>. 
                         Outside of coding, I enjoy spending my time outside, hanging out with friends, and creating content. 
                     </p>
                 </div>

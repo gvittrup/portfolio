@@ -8,7 +8,7 @@ import SkillsSoftware from '../components/SkillsSoftware';
 const Skills = () => {
     return (
         <>
-            <div className='flex flex-col w-full h-3/4 mt-12'>
+            <div className='flex flex-col w-full h-3/4 my-10'>
                 <section name='languages'> 
                     <div className='flex justify-center mx-24 my-4 md:my-8 uppercase text-white underline decoration-sky-400 text-2xl md:text-4xl font-bold'>Languages</div>
                     <SkillsLanguages />

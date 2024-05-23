@@ -44,7 +44,7 @@ const SkillsSoftware = () => {
     ]
 
     return(
-        <motion.div className='flex flex-row flex-wrap justify-center items-center gap-5 mx-16 md:mx-auto'
+        <motion.div className='flex flex-row flex-wrap justify-center items-center gap-5 mx-8 md:mx-auto'
         initial={{
             opacity: 0,
         }}
@@ -55,7 +55,7 @@ const SkillsSoftware = () => {
         >
             {
                 softwares.map((software, index) => {
-                    return <SkillsCard key={software.key} icon={software.software} skill={software.skill} delay={index * 0.2} />
+                    return <SkillsCard key={software.key} icon={software.software} skill={software.skill} delay={index * 0.2} fromDirection={'left'}/>
                 })
             }
         </motion.div>
