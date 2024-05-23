@@ -1,5 +1,8 @@
-import { useContext, useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import './App.css'
+
+// Assets
+import { TbHome } from 'react-icons/tb'
 
 // Context
 import { Project } from './context/ProjectContext'
@@ -35,6 +38,14 @@ function App() {
 
   return (
     <Project >
+      <div id='top'>
+        <a 
+          onClick={() => landingRef.current?.scrollIntoView({ behavior: 'smooth' })}
+          className = "fixed transition ease-in-out duration-400 text-indigo-400 hover:text-indigo-100 drop-shadow-md hover:shadow-innerXL bg-inherit rounded-full left-12 top-12 md:left-8 md:top-7 text-3xl md:text-4xl hover:cursor-pointer p-2 md:p-4 hover:scale-110">
+          <TbHome />
+        </a>
+      </div>
+
       <div name='container' className='w-screen h-screen snap-mandatory snap-y overflow-scroll overscroll-x-none overflow-x-hidden -z-50'>
         <section id='heroSection' ref={landingRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center -z-25'>
           <Landing />

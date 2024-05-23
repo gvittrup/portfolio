@@ -56,7 +56,7 @@ const SkillsLanguages = () => {
             >
             {
                 languages.map((language, index) => {
-                    return <SkillsCard key={language.key} icon={language.language} skill={language.skill} delay={index * 0.2} />
+                    return <SkillsCard key={language.key} icon={language.language} skill={language.skill} delay={index * 0.2} fromDirection={'left'} />
                 })
             }
         </motion.div>

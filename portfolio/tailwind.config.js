@@ -16,6 +16,9 @@ export default {
       width: {
         'w-20': '72px',
       },
+      boxShadow: {
+        innerXL: 'inset 4px 4px 4px 4px rgb(0 0 0 / 0.05)',
+      },
     },
   },
   variants: {

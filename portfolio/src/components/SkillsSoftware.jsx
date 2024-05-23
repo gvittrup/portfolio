@@ -55,7 +55,7 @@ const SkillsSoftware = () => {
         >
             {
                 softwares.map((software, index) => {
-                    return <SkillsCard key={software.key} icon={software.software} skill={software.skill} delay={index * 0.2} />
+                    return <SkillsCard key={software.key} icon={software.software} skill={software.skill} delay={index * 0.2} fromDirection={'left'}/>
                 })
             }
         </motion.div>

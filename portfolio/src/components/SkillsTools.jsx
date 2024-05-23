@@ -55,7 +55,7 @@ const SkillsFrameworks = () => {
             >
             {
                 tools.map((tool, index) => {
-                    return <SkillsCard key={tool.key} icon={tool.tool} skill={tool.skill} delay={index * 0.2} />
+                    return <SkillsCard key={tool.key} icon={tool.tool} skill={tool.skill} delay={index * 0.2} fromDirection={'right'} />
                 })
             }
         </motion.div>
