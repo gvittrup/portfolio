@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
 import SplitText from '@gregoire.ciles/split-text' 
-
-// Components
-import NavDown from '../components/NavDown'
 
 const Landing = ({ next }) => {
 

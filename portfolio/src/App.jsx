@@ -41,7 +41,7 @@ function App() {
       <div id='top'>
         <a 
           onClick={() => landingRef.current?.scrollIntoView({ behavior: 'smooth' })}
-          className = "fixed transition ease-in-out duration-400 text-indigo-400 hover:text-indigo-100 drop-shadow-md hover:shadow-innerXL bg-inherit rounded-full left-12 top-12 md:left-8 md:top-7 text-3xl md:text-4xl hover:cursor-pointer p-2 md:p-4 hover:scale-110">
+          className = "fixed transition ease-in-out duration-400 text-indigo-400 hover:text-indigo-100 drop-shadow-md hover:shadow-innerXL bg-inherit rounded-full left-5 top-8 md:left-8 md:top-7 text-3xl md:text-4xl hover:cursor-pointer p-2 md:p-4 hover:scale-110">
           <TbHome />
         </a>
       </div>
@@ -68,7 +68,7 @@ function App() {
         
         <Spacer image={layer3} />
         
-        <section id='projects' ref={projectsRef} className='flex flex-col justify-center items-center w-screen snap-start bg-slate-200'>
+        <section id='projects' ref={projectsRef} className='relative flex flex-col justify-center items-center w-screen snap-start bg-slate-200'>
           <AllProjects />
         </section>
         

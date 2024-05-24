@@ -13,8 +13,10 @@ export default {
       aspectRatio: {
         '16/5': '960 / 300',
       },
-      width: {
-        'w-20': '72px',
+      spacing: {
+        20: '72px',
+        128: '32rem',
+        144: '36rem',
       },
       boxShadow: {
         innerXL: 'inset 4px 4px 4px 4px rgb(0 0 0 / 0.05)',
