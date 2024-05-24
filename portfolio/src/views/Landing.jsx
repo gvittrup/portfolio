@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
 import SplitText from '@gregoire.ciles/split-text' 
+import { motion, useScroll, useTransform } from 'framer-motion'
 
-// Components
-import NavDown from '../components/NavDown'
-
-const Landing = ({ next }) => {
-
+const Landing = () => {
 
     useEffect(() => {
     const titles = gsap.utils.toArray('.intro-title')
@@ -35,13 +31,11 @@ const Landing = ({ next }) => {
     
 
     return (
-        <>
-            <div name='landingPage' className='flex flex-col justify-center items-center w-screen h-screen bg-slate-500 uppercase font-bold text-3xl lg:text-6xl xl:text-8xl -z-10 absolute bg-fixed'>
+            <div style={{y: scrollY}} name='landingPage' className='absolute flex flex-col justify-center items-center w-screen h-screen uppercase font-bold text-3xl lg:text-6xl xl:text-8xl z-10'>
                 <p style={{ lineHeight: 0 }} className='intro-title text-indigo-200 uppercase overflow-y'>Gunnar Vittrup</p>
                 <p style={{ lineHeight: 0 }} className='intro-title text-zinc-100 uppercase overflow-y'>Full-stack Developer</p>
                 <p style={{ lineHeight: 0 }} className='intro-title text-zinc-100 uppercase overflow-y'>Content Creator</p>
             </div>
-        </>
 
     )
 }

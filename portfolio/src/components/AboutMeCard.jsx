@@ -1,4 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useRef } from 'react';
+import {
+    motion,
+    useMotionTemplate,
+    useMotionValue,
+    useSpring,
+  } from "framer-motion";
 
 // Assets
 import Picture from '../assets/gunnar.png'
@@ -6,63 +12,80 @@ import Picture from '../assets/gunnar.png'
 // Components
 import SocialMediaBar from './SocialMediaBar';
 
-// Styles
-import '../styles/projectCard.css';
+const ROTATION_RANGE = 15;
+const HALF_ROTATION_RANGE = 15 / 2;
 
 const AboutMeCard = () => {
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const captures = document.querySelectorAll(".glow-capture")
-      
-        captures.forEach((capture) => {
-          // Clone a child element. For example, we can clone the first child.
-          const clonedChild = capture.children[0].cloneNode(true)
-          const overlay = capture.querySelector(".glow-overlay")
-      
-          // Append the cloned child to the overlay.
-          overlay.appendChild(clonedChild)
-      
-          capture.addEventListener("mousemove", (event) => {
-            const x = event.pageX - capture.offsetLeft
-            const y = event.pageY - capture.offsetTop
+    const ref = useRef(null);
 
-            console.log("x: ", x, ", y: ", y)
-      
-            overlay.style.setProperty("--glow-x", `${x}px`)
-            overlay.style.setProperty("--glow-y", `${y}px`)
-            overlay.style.setProperty("--glow-opacity", "1")
-          })
-      
-          // Add mouseleave event to remove the glow effect
-          capture.addEventListener("mouseleave", () => {
-            overlay.style.setProperty("--glow-opacity", "0")
-          })
-        })
-      })
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+  
+    const xSpring = useSpring(x);
+    const ySpring = useSpring(y);
+  
+    const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
+
+    const handleMouseMove = (e) => {
+        if (!ref.current) return [0, 0];
+
+        const rect = ref.current.getBoundingClientRect();
+
+        const width = rect.width;
+        const height = rect.height;
+
+        const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
+        const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
+
+        const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
+        const rY = mouseX / width - HALF_ROTATION_RANGE;
+
+        x.set(rX);
+        y.set(rY);
+    };
+
+    const handleMouseLeave = () => {
+        x.set(0);
+        y.set(0);
+    };    
 
     return (
-        <div className='flex justify-center relative glow-capture'>
-            <div className='group flex flex-col justify-center items-center w-full h-full min-h-80 mx-6 md:mx-64 lg:mx-96 md:my-24 bg-black/30 rounded-3xl border-4 border-white/5 drop-shadow-xl glow glow:ring-1 glow:border-glow glow:ring-glow glow:bg-glow/[.15]'>
-                <div name='picture' className='flex justify-top my-8'>
-                    <img src={Picture} alt='Gunnar Vittrup' className='object-cover w-40 md:w-48 h-40 md:h-48 rounded-full border-4 border-white/5 shadow-inner'/>
-                </div>
-                <div name='Title' className='flex justify-center w-3/4 text-3xl md:text-5xl uppercase text-zinc-100 font-bold'>
+        <motion.div
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+            transformStyle: "preserve-3d",
+            transform,
+        }}
+        className="relative w-96 md:w-128 h-128 mx-12 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+        >
+            <div
+            style={{
+            transform: "translateZ(75px)",
+            transformStyle: "preserve-3d",
+            }}
+            className="absolute inset-4 grid place-content-center rounded-xl bg-indigo-200/75 shadow-xl"
+            >
+                <img src={Picture} style={{ transform: 'translateZ(50px)' }} alt='Gunnar Vittrup' 
+                    className='flex justify-self-center object-cover w-40 lg:w-48 h-40 lg:h-48 rounded-full border-2 border-indigo-100 shadow-xl' />
+                <p name='title' style={{ transform: 'translateZ(75px)' }} 
+                    className='flex justify-center w-full my-5 text-3xl md:text-5xl uppercase text-zinc-100 font-bold'>
                     Welcome :{')'}
-                </div>
-                <div name='description' className='flex w-3/4 my-5 text-md md:text-xl text-white'>
+                </p>
+                <div name='description' style={{ transform: 'translateZ(50px)' }} className='w-full text-base md:text-xl px-6 text-white'>
+                    <a className='text-violet-400 hover:text-zinc-100 font-bold'>full-stack developer</a> 
                     <p>
-                        I'm Gunnar, a{' '}<a className='text-indigo-200 font-bold'>full-stack developer</a>. 
-                        Outside of coding, I enjoy spending my time outside, hanging out with friends, and creating content. 
+                        friends - outdoors - tech 
                     </p>
                 </div>
-                <div name='divider' className='w-3/4 h-1 bg-zinc-100 rounded-full'></div>
-                <div name='social' className='flex justify-center w-3/4'>
+                <div name='divider' style={{ transform: 'translateZ(25px)' }} className='flex justify-self-center w-full h-1 my-3 bg-zinc-100 rounded-full'></div>
+                <div name='social' style={{ transform: 'translateZ(50px)' }} className='flex justify-self-center w-3/4'>
                     <SocialMediaBar />
                 </div>
-                <div className='glow-overlay' style={{'--glow-color': '#7c3aed'}}></div>
             </div>
-        </div>
-
+        </motion.div>
     )
 }
 
