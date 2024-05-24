@@ -59,7 +59,7 @@ const AboutMeCard = () => {
             transformStyle: "preserve-3d",
             transform,
         }}
-        className="relative w-full h-3/4 md:min-h-144 max-w-1/4 mx-6 md:mx-64 lg:mx-96 md:my-24 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+        className="relative w-96 md:w-128 h-128 mx-12 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
         >
             <div
             style={{
@@ -74,13 +74,13 @@ const AboutMeCard = () => {
                     className='flex justify-center w-full my-5 text-3xl md:text-5xl uppercase text-zinc-100 font-bold'>
                     Welcome :{')'}
                 </p>
-                <div name='description' style={{ transform: 'translateZ(50px)' }} className='flex w-full my-5 text-md md:text-xl px-6 text-white'>
+                <div name='description' style={{ transform: 'translateZ(50px)' }} className='w-full text-base md:text-xl px-6 text-white'>
+                    <a className='text-violet-400 hover:text-zinc-100 font-bold'>full-stack developer</a> 
                     <p>
-                        I'm Gunnar, a{' '}<a className='text-violet-400 hover:text-zinc-100 font-bold'>full-stack developer</a>. 
-                        Outside of coding, I enjoy spending my time outside, hanging out with friends, and creating content. 
+                        friends - outdoors - tech 
                     </p>
                 </div>
-                <div name='divider' style={{ transform: 'translateZ(25px)' }} className='flex justify-self-center w-3/4 h-1 my-3 bg-zinc-100 rounded-full'></div>
+                <div name='divider' style={{ transform: 'translateZ(25px)' }} className='flex justify-self-center w-full h-1 my-3 bg-zinc-100 rounded-full'></div>
                 <div name='social' style={{ transform: 'translateZ(50px)' }} className='flex justify-self-center w-3/4'>
                     <SocialMediaBar />
                 </div>

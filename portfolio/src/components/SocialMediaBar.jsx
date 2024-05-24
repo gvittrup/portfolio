@@ -27,7 +27,7 @@ const SocialMediaBar = () => {
 
     return(
         <>
-            <div className='flex flex-row justify-center w-full gap-2 md:gap-8 my-5'>
+            <div className='grid grid-cols-5 place-items-center w-full gap-2 md:gap-8 my-5'>
                 <a className='transition ease-in-out duration-500 w-12 h-12 rounded-full hover:bg-violet-400 hover:text-red-500 hover:scale-110 drop-shadow-md hover:drop-shadow-xl hover:-translate-y-1' onClick={() => printResume()}><FaFilePdf className='w-full h-full px-2 py-2 text-violet-400 hover:text-white'/></a>
                 <a className='transition ease-in-out duration-500 w-12 h-12 rounded-full hover:bg-violet-400 hover:text-red-500 hover:scale-110 drop-shadow-md hover:drop-shadow-xl hover:-translate-y-1' href='https://www.linkedin.com/in/gvittrup/'><FaLinkedin className='w-full h-full px-2 py-2 text-violet-400 hover:text-white' /></a>
                 <a className='transition ease-in-out duration-500 w-12 h-12 rounded-full hover:bg-violet-400 hover:text-red-500 hover:scale-110 drop-shadow-md hover:drop-shadow-xl hover:-translate-y-1' href='https://github.com/gvittrup'><FaGithub className='w-full h-full px-2 py-2 text-violet-400 hover:text-white' /></a>

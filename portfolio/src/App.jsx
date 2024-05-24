@@ -38,42 +38,44 @@ function App() {
 
   return (
     <Project >
-      <div id='top'>
-        <a 
-          onClick={() => landingRef.current?.scrollIntoView({ behavior: 'smooth' })}
-          className = "fixed transition ease-in-out duration-400 text-indigo-400 hover:text-indigo-100 drop-shadow-md hover:shadow-innerXL bg-inherit rounded-full left-5 top-8 md:left-8 md:top-7 text-3xl md:text-4xl hover:cursor-pointer p-2 md:p-4 hover:scale-110">
-          <TbHome />
-        </a>
-      </div>
+      <div name='container' className='relative w-screen h-full bg-slate-500'>
+        <div id='top' className='relative'>
+          <a 
+            onClick={() => landingRef.current?.scrollIntoView({ behavior: 'smooth' })}
+            className = "fixed left-5 top-8 md:left-8 md:top-7 p-2 md:p-4 z-20 transition ease-in-out duration-400 text-indigo-400 hover:text-white drop-shadow-md hover:shadow-innerXL bg-inherit rounded-full text-3xl md:text-4xl hover:cursor-pointer hover:scale-110">
+            <TbHome />
+          </a>
+        </div>
 
-      <div name='container' className='w-screen h-screen snap-mandatory snap-y overflow-scroll overscroll-x-none overflow-x-hidden -z-50'>
-        <section id='heroSection' ref={landingRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center -z-25'>
-          <Landing />
-          <NavDown section='landing' next='about me' ref={aboutRef}/>
-        </section>
+        <div name='sections' className='relative w-screen h-screen snap-mandatory snap-y overflow-scroll overscroll-none'>
+          <section id='landing' ref={landingRef} className='relative grid place-content-center w-screen h-screen snap-center'>
+            <Landing />
+            <NavDown section='landing' next='about me' ref={aboutRef}/>
+          </section>
 
-        <Spacer image={layer1} />
+          <Spacer image={layer1} />
 
-        <section id='aboutMe' ref={aboutRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center bg-slate-200'>
-          <AboutMe />
-          <NavDown section='about' next='skills' ref={skillsRef}/>
-        </section>
-        
-        <Spacer image={layer2} />
-        
-        <section id='skills' ref={skillsRef} className='flex flex-col w-screen h-sceen snap-center bg-slate-800'>
-          <Skills />
-          <NavDown section='skills' next='projects' ref={projectsRef}/>
-        </section>
-        
-        <Spacer image={layer3} />
-        
-        <section id='projects' ref={projectsRef} className='relative flex flex-col justify-center items-center w-screen snap-start bg-slate-200'>
-          <AllProjects />
-        </section>
-        
-        <ActiveProjectHandler ref={landingRef}/>
+          <section id='about' ref={aboutRef} className='relative flex flex-col w-screen h-screen snap-center bg-slate-200 z-10'>
+            <AboutMe />
+            <NavDown section='about' next='skills' ref={skillsRef}/>
+          </section>
 
+          <Spacer image={layer2} />
+
+          <section id='skills' ref={skillsRef} className='relative flex flex-col w-screen h-screen snap-center bg-slate-800 z-10'>
+            <Skills />
+            <NavDown section='skills' next='projects' ref={projectsRef}/>
+          </section>
+
+          <Spacer image={layer3} />
+
+          <section id='projects' ref={projectsRef} className='relative grid place-content-center w-screen snap-start bg-slate-200 z-10'>
+            <AllProjects />
+          </section>
+
+          <ActiveProjectHandler />
+
+        </div>
       </div>
     </Project>
   )

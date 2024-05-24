@@ -45,15 +45,13 @@ const AllProjects = () => {
     ]
 
     return(
-        <>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 lg:gap-14 mx-12 lg:mx-36 2xl:mx-48 3xl:mx-96 my-24'>
-                {
-                    projects.map((project, index) => {
-                        return <ProjectCard key={project.id} project={project} />
-                    })
-                }
-            </div>
-        </>
+        <div className='relative grid grid-cols-1 place-items-center lg:grid-cols-2 gap-4 md:gap-8 lg:gap-14 mx-12 lg:mx-36 2xl:mx-48 3xl:mx-96 my-24'>
+            {
+                projects.map((project, index) => {
+                    return <ProjectCard key={project.id} project={project} />
+                })
+            }
+        </div>
     )
 }
 
