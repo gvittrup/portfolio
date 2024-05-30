@@ -16,29 +16,19 @@ import Brave from '../views/Projects/Brave';
 import MobileXR from '../views/Projects/MobileXR';
 
 // Transition Images
-import layer1 from '../assets/backgrounds/layer1.svg'
-import layer2 from '../assets/backgrounds/layer2.svg'
-import layer3 from '../assets/backgrounds/layer3.svg'
+import aquasaurious from '../assets/backgrounds/aquasaurious.svg'
+import mokelumne from '../assets/backgrounds/mokelumne.svg'
 
 const ActiveProjectHandler = forwardRef(( {}, ref ) => {
 
-    const projectMap = new Map([
-        ['mokelumne', <Mokelumne />],
-        ['aquasaurious', <Aquasaurious />],
-        ['hyv', <HYV />],
-        ['hp-dune', <HPDune />],
-        ['brave', <Brave />],
-        ['mobile-xr', <MobileXR />]
+    const projects = new Map([
+        ['mokelumne', {component: <Mokelumne />, layer: mokelumne}],
+        ['aquasaurious', {component: <Aquasaurious />, layer: aquasaurious}],
+        ['hyv', {component: <HYV />, layer: aquasaurious}],
+        ['hp-dune', {component: <HPDune />, layer: aquasaurious}],
+        ['brave', {component: <Brave />, layer: aquasaurious}],
+        ['mobile-xr', {component: <MobileXR />, layer: aquasaurious}]
     
-    ])
-
-    const spacerMap = new Map([
-        ['mokelumne', layer2],
-        ['aquasaurious', layer2],
-        ['hyv', layer2],
-        ['hp-dune', layer2],
-        ['brave', layer2],
-        ['mobile-xr', layer2]
     ])
 
     // Context
@@ -47,7 +37,6 @@ const ActiveProjectHandler = forwardRef(( {}, ref ) => {
 
     // Refs
     const activeProjectRef = useRef(null);
-    const homeRef = useRef(ref);
 
     useEffect(() => {
         activeProjectRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -55,13 +44,12 @@ const ActiveProjectHandler = forwardRef(( {}, ref ) => {
 
     return (
         project ? (
-            <>
-                <Spacer image={spacerMap.get(project)} />
-                <section id='activeProject' ref={activeProjectRef} className='flex flex-col justify-center items-center w-screen h-screen snap-center'>
-                    {projectMap.get(project)}
-                    {/* <NavDown section='activeProject' next='home' ref={homeRef} /> */}
+            <div>
+                <Spacer image={projects.get(project).layer} />
+                <section id='activeProject' ref={activeProjectRef} className='flex flex-col justify-center items-center w-screen snap-center'>
+                    {projects.get(project).component}
                 </section>
-            </>
+            </div>
         ) : (
             <></>
         )

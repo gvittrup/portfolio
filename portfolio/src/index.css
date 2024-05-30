@@ -70,3 +70,35 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@font-face {
+  font-family: 'extraBold';
+  src: local("Wix Madefor Text"),
+  url('./assets/fonts/WixMadeforText-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'semiBold';
+  src: local("Josefin Sans"),
+  url('./assets/fonts/JosefinSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'thin';
+  src: local("Josefin Sans"),
+  url('./assets/fonts/JosefinSans-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'regular';
+  src: local("Josefin Sans"),
+  url('./assets/fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+
+
+
+@font-face {
+  font-family: 'mediumItalic';
+  src: local("DM Sans"),
+  url('./assets/fonts/DMSans-MediumItalic.ttf') format('truetype');
+}

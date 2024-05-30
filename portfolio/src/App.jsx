@@ -47,7 +47,7 @@ function App() {
           </a>
         </div>
 
-        <div name='sections' className='relative w-screen h-screen snap-mandatory snap-y overflow-scroll overscroll-none'>
+        <div name='sections' className='relative w-screen h-screen snap-mandatory snap-y overflow-scroll overscroll-none touch-pan-y'>
           <section id='landing' ref={landingRef} className='relative grid place-content-center w-screen h-screen snap-center'>
             <Landing />
             <NavDown section='landing' next='about me' ref={aboutRef}/>
