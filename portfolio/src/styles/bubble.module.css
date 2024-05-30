@@ -1,0 +1,30 @@
+.hoverText {
+    transition:
+      0.35s font-family ease,
+      0.35s color;
+  }
+  
+  .hoverText:hover {
+    font-family: 'semiBold';
+    color: rgb(238, 242, 255);
+  }
+  
+  /* To the right */
+  .hoverText:hover + .hoverText {
+    font-family: 'regular';
+    color: rgb(199, 247, 254);
+  }
+  
+  .hoverText:hover + .hoverText + .hoverText {
+    font-weight: 300;
+  }
+  
+  /* To the left */
+  .hoverText:has(+ .hoverText:hover) {
+    font-family: 'regular';
+    color: rgb(199, 247, 254);
+  }
+  
+  .hoverText:has(+ .hoverText + .hoverText:hover) {
+    font-weight: 300;
+  }

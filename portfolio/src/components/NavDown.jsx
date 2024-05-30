@@ -21,7 +21,7 @@ const NavDown = forwardRef(( {section, next}, ref ) => {
         >
         {        
             section === 'landing' ? (
-                <div className='flex-col justify-end items-center hidden md:flex w-screen h-screen pb-10'>
+                <div className='relative z-10 flex-col justify-end items-center hidden md:flex w-screen h-screen pb-10'>
                     <button className='w-1/2 bg-transparent' onClick={() => ref.current?.scrollIntoView({ behavior: 'smooth' })}>
                         <div className='flex justify-center mb-4 text-3xl lowercase text-zinc-100 drop-shadow-xl'>
                             {next}

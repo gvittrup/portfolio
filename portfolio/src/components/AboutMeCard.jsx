@@ -7,7 +7,7 @@ import {
   } from "framer-motion";
 
 // Assets
-import Picture from '../assets/gunnar.png'
+import Picture from '../assets/images/gunnar.png'
 
 // Components
 import SocialMediaBar from './SocialMediaBar';
