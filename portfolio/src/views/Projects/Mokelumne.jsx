@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 // Assets
-import MRFP from '../../assets/images/MRFP.png'
+import MRFP from '../../assets/images/Mokelumne/MRFP.png'
 
 const Mokelumne = () => {
     return (

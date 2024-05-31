@@ -18,15 +18,17 @@ import MobileXR from '../views/Projects/MobileXR';
 // Transition Images
 import aquasaurious from '../assets/backgrounds/aquasaurious.svg'
 import mokelumne from '../assets/backgrounds/mokelumne.svg'
+import hyv from '../assets/backgrounds/hyv.svg'
+import brave from '../assets/backgrounds/brave.svg'
 
 const ActiveProjectHandler = forwardRef(( {}, ref ) => {
 
     const projects = new Map([
         ['mokelumne', {component: <Mokelumne />, layer: mokelumne}],
         ['aquasaurious', {component: <Aquasaurious />, layer: aquasaurious}],
-        ['hyv', {component: <HYV />, layer: aquasaurious}],
+        ['hyv', {component: <HYV />, layer: hyv}],
         ['hp-dune', {component: <HPDune />, layer: aquasaurious}],
-        ['brave', {component: <Brave />, layer: aquasaurious}],
+        ['brave', {component: <Brave />, layer: brave}],
         ['mobile-xr', {component: <MobileXR />, layer: aquasaurious}]
     
     ])
