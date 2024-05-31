@@ -1,34 +1,59 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+
+// Components
+import ImageCard from '../../components/Image'
+
+// Assets
+import model from '../../assets/images/Brave/model.png'
+import angle1 from '../../assets/images/Brave/angle1.png'
+import angle2 from '../../assets/images/Brave/angle2.png'
+import squatBefore from '../../assets/images/Brave/squat-before.png'
+import squatAfter from '../../assets/images/Brave/squat-after.png'
+import swing1 from '../../assets/images/Brave/swing1.jpg'
+import swing2 from '../../assets/images/Brave/swing2.jpg'
+import swing3 from '../../assets/images/Brave/swing3.jpg'
+import bat from '../../assets/images/Brave/bat.png'
+import club from '../../assets/images/Brave/club.png'
+
 
 const Brave = () => {
     return (
-        <div name='container' className='flex justify-center items-center w-full h-full text-white text-2xl bg-slate-800'>
-            <div className='flex flex-col w-1/2 max-w-1/5 min-w-96 h-1/2 bg-white/30 border-4 border-white rounded-xl shadow-2xl'>
-                <p className='uppercase mt-10 mx-1 text-zinc-100 font-bold'>Page is still under development :{'('}</p>
-                <p className='uppercase mb-10 text-zinc-100 text-lg font-light'>Last Update: 05/22/2024</p>
-                <div className='flex justify-center'>
-                    <div className='w-full h-1 rounded-xl bg-zinc-100'></div>
+        <div className='relative w-full h-full flex flex-col justify-center items-center bg-sky-950'>
+            <div name='container' className='grid place-items-center w-full md:w-1/2 px-5 my-20 gap-8'>
+                <div name='header' className='flex flex-row items-center gap-8'>
+                        <p className='text-5xl md:text-7xl font-aquasauriousTextRegular uppercase text-white inline-block bg-clip-text'>
+                            <a className='text-emerald-400'>valor</a> biomechanics
+                        </p>
                 </div>
-                <div className='flex justify-center items-center my-5 mx-2'>
-                    Navigate to external portfolio site:
+                <div name='divider' className='w-full h-0.5 my-3 rounded-full bg-gradient-to-r from-emerald-50 to-emerald-500'></div>
+                <div name='description' className='flex justify-self-center w-11/12'>
+                    <p className='text-justify text-base md:text-xl text-emerald-50'>
+                    Professional work done for Brave Virtual Worlds, creating a virtual character, virtual assets, textures,
+                    and materials that were emphasized by the lighting and post-processing implemented within Unity. Below are a few scripts as well that changed the behavior of the model and the user-experience through the application.
+                    </p>
                 </div>
-                <a className='flex justify-center items-center my-5 mx-2' href='https://gunnarvittrup.myportfolio.com/brave'>
-                    <motion.button
-                        whileHover={{
-                            scale: 1.05,
-                            transition: { duration: 0.25, type: 'spring' }
-                        }}
-                        whileTap={{
-                            scale: 0.9,
-                            transition: { duration: 0.25, type: 'spring' }
-                        }}
-                        transition={{ duration: 1 }}
-                        className='flex w-1/2 h-3/4 justify-center items-center text-zinc-100'
-                        >
-                            Brave
-                    </motion.button>
-                </a>
+                <ImageCard image={model} />
+                <h1 className='text-emerald-50 uppercase text-lg'>angle measurement</h1>
+                <div className='grid grid-cols-2 place-content-center gap-2'>
+                    <ImageCard image={angle1} />
+                    <ImageCard image={angle2} />
+                </div>
+                <h1 className='text-emerald-50 uppercase text-lg'>ground detection</h1>
+                <div className='grid grid-cols-2 place-content-center gap-2'>
+                    <ImageCard image={squatBefore} />
+                    <ImageCard image={squatAfter} />
+                </div>
+                <h1 className='text-emerald-50 uppercase text-lg'>movement</h1>
+                <div className='grid grid-cols-3 place-content-center gap-2'>
+                    <ImageCard image={swing1} />
+                    <ImageCard image={swing2} />
+                    <ImageCard image={swing3} />
+                </div>
+                <h1 className='text-emerald-50 uppercase text-lg'>other models</h1>
+                <div className='grid grid-cols-2 place-content-center gap-2'>
+                    <ImageCard image={bat} />
+                    <ImageCard image={club} />
+                </div>
             </div>
         </div>
     )

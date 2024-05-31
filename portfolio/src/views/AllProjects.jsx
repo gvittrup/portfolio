@@ -25,7 +25,7 @@ const AllProjects = () => {
             skills: 'Python, Node.js, MongoDB, Grafana, Podman',
         },
         {
-            title: 'Brave Virutal Worlds',
+            title: 'Valor Biomechanics',
             id: 'brave',
             description: 'Member in designing data-pipeline for processing user inputs to normalize and control character behavior and movements within virtual space.',
             skills: 'C#, Python, Swift, AWS, Unity, Xcode',

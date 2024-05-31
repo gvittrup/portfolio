@@ -1,34 +1,42 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+
+// Components
+import ImageCard from '../../components/Image'
+
+// Assets
+import cheering from '../../assets/images/HYV/cheering.png'
+import game1 from '../../assets/images/HYV/game1.png'
+import game2 from '../../assets/images/HYV/game2.png'
+import instructions from '../../assets/images/HYV/instructions.png'
+import menu from '../../assets/images/HYV/menu.png'
+import scene from '../../assets/images/HYV/scene.png'
 
 const HYV = () => {
     return (
-        <div name='container' className='flex justify-center items-center w-full h-full text-white text-2xl bg-slate-800'>
-            <div className='flex flex-col w-1/2 max-w-1/5 min-w-96 h-1/2 bg-white/30 border-4 border-white rounded-xl shadow-2xl'>
-                <p className='uppercase mt-10 mx-1 text-zinc-100 font-bold'>Page is still under development :{'('}</p>
-                <p className='uppercase mb-10 text-zinc-100 text-lg font-light'>Last Update: 05/22/2024</p>
-                <div className='flex justify-center'>
-                    <div className='w-full h-1 rounded-xl bg-zinc-100'></div>
-                </div>
-                <div className='flex justify-center items-center my-5 mx-2'>
-                    Navigate to external portfolio site:
-                </div>
-                <a className='flex justify-center items-center my-5 mx-2' href='https://gunnarvittrup.myportfolio.com/hyv'>
-                    <motion.button
-                        whileHover={{
-                            scale: 1.05,
-                            transition: { duration: 0.25, type: 'spring' }
-                        }}
-                        whileTap={{
-                            scale: 0.9,
-                            transition: { duration: 0.25, type: 'spring' }
-                        }}
-                        transition={{ duration: 1 }}
-                        className='flex w-1/2 h-3/4 justify-center items-center text-zinc-100'
-                        >
+        <div className='relative w-full h-full flex flex-col justify-center items-center bg-violet-900'>
+            <div name='container' className='grid place-items-center w-full md:w-1/2 px-5 my-20'>
+                <div name='header' className='flex flex-row items-center gap-8'>
+                        <h1 className='text-5xl md:text-7xl font-mokeText uppercase text-white inline-block bg-clip-text'>
                             HYV
-                    </motion.button>
-                </a>
+                        </h1>
+                </div>
+                <div name='divider' className='w-full h-0.5 my-3 rounded-full bg-gradient-to-r from-yellow-200 to-violet-500'></div>
+                <div name='description' className='flex justify-self-center w-11/12'>
+                    <p className='text-justify text-base md:text-xl text-stone-100'>
+                    HYV introduces the next level of entertainment by providing enhanced interactive virtual reality experiences, connecting users with their favorite content creators, music artists, and more.
+                    </p>
+                </div>
+                <div className='flex justify-center my-10 w-full shadow-innerXL drop-shadow-2xl bg-sky-300/30 border-sky-100 border-2 rounded-3xl'>
+                    <iframe className='my-5 w-full h-80 md:w-854 md:h-480' src="https://www.youtube.com/embed/cN8tDfrcsAw?si=YPLzyRYghfTtkJzH&amp;controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div name='subgrid' className='grid grid-cols-2 gap-2 place-items-center'>
+                    <ImageCard image={menu} />
+                    <ImageCard image={instructions} />
+                    <ImageCard image={game1} />
+                    <ImageCard image={game2} />
+                    <ImageCard image={cheering} />
+                    <ImageCard image={scene} />
+                </div>
             </div>
         </div>
     )

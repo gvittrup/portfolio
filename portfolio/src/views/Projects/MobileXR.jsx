@@ -24,7 +24,7 @@ const MobileXR = () => {
                             transition: { duration: 0.25, type: 'spring' }
                         }}
                         transition={{ duration: 1 }}
-                        className='flex w-1/2 h-3/4 justify-center items-center text-zinc-100'
+                        className='flex w-1/2 h-3/4 justify-center items-center bg-zinc-700 border-zinc-100 text-zinc-100'
                         >
                             Mobile XR
                     </motion.button>
