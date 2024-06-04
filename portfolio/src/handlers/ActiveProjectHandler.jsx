@@ -20,6 +20,7 @@ import aquasaurious from '../assets/backgrounds/aquasaurious.svg'
 import mokelumne from '../assets/backgrounds/mokelumne.svg'
 import hyv from '../assets/backgrounds/hyv.svg'
 import brave from '../assets/backgrounds/brave.svg'
+import mobileXR from '../assets/backgrounds/mobile-xr.svg'
 
 const ActiveProjectHandler = forwardRef(( {}, ref ) => {
 
@@ -29,7 +30,7 @@ const ActiveProjectHandler = forwardRef(( {}, ref ) => {
         ['hyv', {component: <HYV />, layer: hyv}],
         ['hp-dune', {component: <HPDune />, layer: aquasaurious}],
         ['brave', {component: <Brave />, layer: brave}],
-        ['mobile-xr', {component: <MobileXR />, layer: aquasaurious}]
+        ['mobile-xr', {component: <MobileXR />, layer: mobileXR}]
     
     ])
 
