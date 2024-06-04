@@ -28,8 +28,9 @@ const Brave = () => {
                 <div name='divider' className='w-full h-0.5 my-3 rounded-full bg-gradient-to-r from-emerald-50 to-emerald-500'></div>
                 <div name='description' className='flex justify-self-center w-11/12'>
                     <p className='text-justify text-base md:text-xl text-emerald-50'>
-                    Professional work done for Brave Virtual Worlds, creating a virtual character, virtual assets, textures,
-                    and materials that were emphasized by the lighting and post-processing implemented within Unity. Below are a few scripts as well that changed the behavior of the model and the user-experience through the application.
+                    Professional work done for Brave Virtual Worlds, where I was a member in the development of the data
+                    processing pipeline regarding character movement. Additionally, I was the lead designer for the character model,
+                    assets, and scene. This app was developed in Unity, C#, Swift, and Python.
                     </p>
                 </div>
                 <ImageCard image={model} />

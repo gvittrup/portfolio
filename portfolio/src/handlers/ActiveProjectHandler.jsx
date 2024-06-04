@@ -48,7 +48,7 @@ const ActiveProjectHandler = forwardRef(( {}, ref ) => {
         project ? (
             <div>
                 <Spacer image={projects.get(project).layer} />
-                <section id='activeProject' ref={activeProjectRef} className='flex flex-col justify-center items-center w-screen snap-center'>
+                <section id='activeProject' ref={activeProjectRef} className='flex flex-col justify-center items-center w-screen h-full snap-start'>
                     {projects.get(project).component}
                 </section>
             </div>
