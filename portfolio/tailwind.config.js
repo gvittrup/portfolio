@@ -33,6 +33,7 @@ export default {
         aquasauriousTextBold: ['semiBold'],
         aquasauriousTextThin: ['thin'],
         aquasauriousTextRegular: ['regular'],
+        hpDuneText: ['outline'],
       },
     },
   },

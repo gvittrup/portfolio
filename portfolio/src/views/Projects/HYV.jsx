@@ -29,7 +29,7 @@ const HYV = () => {
                 <div className='flex justify-center my-10 w-full shadow-innerXL drop-shadow-2xl bg-sky-300/30 border-sky-100 border-2 rounded-3xl'>
                     <iframe className='my-5 w-full h-80 md:w-854 md:h-480' src="https://www.youtube.com/embed/cN8tDfrcsAw?si=YPLzyRYghfTtkJzH&amp;controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div name='subgrid' className='grid grid-cols-2 gap-2 place-items-center'>
+                <div name='subgrid' className='grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center'>
                     <ImageCard image={menu} />
                     <ImageCard image={instructions} />
                     <ImageCard image={game1} />

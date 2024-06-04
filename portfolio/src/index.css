@@ -102,3 +102,10 @@ button:focus-visible {
   src: local("DM Sans"),
   url('./assets/fonts/DMSans-MediumItalic.ttf') format('truetype');
 }
+
+
+@font-face {
+  font-family: 'outline';
+  src: local("Goffik Outline"),
+  url('./assets/fonts/Goffik-O.ttf') format('truetype');
+}

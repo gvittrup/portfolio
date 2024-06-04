@@ -27,21 +27,21 @@ const MobileXR = () => {
                     Interactive and engaging experiences designed in Unity to utilize augmented and virtual reality on a mobile device.
                     </p>
                 </div>
-                <div name='subgrid' className='grid grid-cols-2 gap-2 place-items-center'>
+                <div name='subgrid' className='grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center'>
                     <ImageCard image={scene1} />
                     <ImageCard image={scene2} />
                 </div>
                 <div className='flex justify-center my-10 w-full shadow-innerXL drop-shadow-2xl bg-sky-300/30 border-sky-100 border-2 rounded-3xl'>
                     <iframe className='my-5 w-full h-80 md:w-854 md:h-480' src="https://youtube.com/embed/XvI3MEx4WOQ?si=r-2TuLmaYn8-XZcF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div name='subgrid' className='grid grid-cols-2 gap-2 place-items-center'>
+                <div name='subgrid' className='grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center'>
                     <ImageCard image={ui} />
                     <ImageCard image={phone} />
                 </div>
                 <div className='flex justify-center my-10 w-full shadow-innerXL drop-shadow-2xl bg-sky-300/30 border-sky-100 border-2 rounded-3xl'>
                     <iframe className='my-5 w-full h-80 md:w-854 md:h-480' src="https://www.youtube.com/embed/t_WPdDG60fc?si=AunAv1jkBgxiz17R&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div name='subgrid' className='grid grid-cols-2 gap-2 place-items-center'>
+                <div name='subgrid' className='grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center'>
                     <ImageCard image={cpuUI} />
                     <ImageCard image={cpu} />
                 </div>

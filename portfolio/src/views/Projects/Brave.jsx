@@ -35,23 +35,23 @@ const Brave = () => {
                 </div>
                 <ImageCard image={model} />
                 <h1 className='text-emerald-50 uppercase text-lg'>angle measurement</h1>
-                <div className='grid grid-cols-2 place-content-center gap-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2 place-content-center gap-2'>
                     <ImageCard image={angle1} />
                     <ImageCard image={angle2} />
                 </div>
                 <h1 className='text-emerald-50 uppercase text-lg'>ground detection</h1>
-                <div className='grid grid-cols-2 place-content-center gap-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2 place-content-center gap-2'>
                     <ImageCard image={squatBefore} />
                     <ImageCard image={squatAfter} />
                 </div>
                 <h1 className='text-emerald-50 uppercase text-lg'>movement</h1>
-                <div className='grid grid-cols-3 place-content-center gap-2'>
+                <div className='grid grid-cols-1 md:grid-cols-3 place-content-center gap-2'>
                     <ImageCard image={swing1} />
                     <ImageCard image={swing2} />
                     <ImageCard image={swing3} />
                 </div>
                 <h1 className='text-emerald-50 uppercase text-lg'>other models</h1>
-                <div className='grid grid-cols-2 place-content-center gap-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2 place-content-center gap-2'>
                     <ImageCard image={bat} />
                     <ImageCard image={club} />
                 </div>
