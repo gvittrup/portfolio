@@ -18,6 +18,10 @@ export const ImageCard = ({ image }) => {
                 rotate: 2,
                 transition: { duration: 0.25, type: 'spring' }
             }}
+            whileTap={{
+                scale: 1.5,
+                transition: { duration: 0.25, type: 'spring' }
+            }}
             transition={{ duration: 0.25 }}
             >
             <img src={image} className='border-2 border-stone-100 rounded-lg transition ease-in-out over:drop-shadow-2xl hover:z-20' />

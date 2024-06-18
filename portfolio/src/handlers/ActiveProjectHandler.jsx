@@ -20,6 +20,8 @@ import aquasaurious from '../assets/backgrounds/aquasaurious.svg'
 import mokelumne from '../assets/backgrounds/mokelumne.svg'
 import hyv from '../assets/backgrounds/hyv.svg'
 import brave from '../assets/backgrounds/brave.svg'
+import mobileXR from '../assets/backgrounds/mobile-xr.svg'
+import hpDune from '../assets/backgrounds/hp-dune.svg'
 
 const ActiveProjectHandler = forwardRef(( {}, ref ) => {
 
@@ -27,9 +29,9 @@ const ActiveProjectHandler = forwardRef(( {}, ref ) => {
         ['mokelumne', {component: <Mokelumne />, layer: mokelumne}],
         ['aquasaurious', {component: <Aquasaurious />, layer: aquasaurious}],
         ['hyv', {component: <HYV />, layer: hyv}],
-        ['hp-dune', {component: <HPDune />, layer: aquasaurious}],
+        ['hp-dune', {component: <HPDune />, layer: hpDune}],
         ['brave', {component: <Brave />, layer: brave}],
-        ['mobile-xr', {component: <MobileXR />, layer: aquasaurious}]
+        ['mobile-xr', {component: <MobileXR />, layer: mobileXR}]
     
     ])
 
@@ -46,9 +48,9 @@ const ActiveProjectHandler = forwardRef(( {}, ref ) => {
 
     return (
         project ? (
-            <div>
+            <div className='relative'>
                 <Spacer image={projects.get(project).layer} />
-                <section id='activeProject' ref={activeProjectRef} className='flex flex-col justify-center items-center w-screen snap-center'>
+                <section id='activeProject' ref={activeProjectRef} className='relative flex flex-col justify-center items-center w-screen h-full snap-start'>
                     {projects.get(project).component}
                 </section>
             </div>

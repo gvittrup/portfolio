@@ -37,7 +37,7 @@ function App() {
   }, [landingRef])
 
   return (
-    <Project >
+    <Project className='relative'>
       <div name='container' className='relative w-screen h-full bg-slate-500'>
         <div id='top' className='relative'>
           <a 

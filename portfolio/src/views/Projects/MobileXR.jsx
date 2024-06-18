@@ -1,34 +1,47 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+// Components
+import ImageCard from '../../components/Image'
+
+// Assets
+import scene1 from '../../assets/images/MobileXR/scene1.png'
+import scene2 from '../../assets/images/MobileXR/scene2.png'
+import ui from '../../assets/images/MobileXR/ui.png'
+import phone from '../../assets/images/MobileXR/phone.png'
+import cpuUI from '../../assets/images/MobileXR/cpu_ui.png'
+import cpu from '../../assets/images/MobileXR/cpu.png'
+
 const MobileXR = () => {
     return (
-        <div name='container' className='flex justify-center items-center w-full h-full text-white text-2xl bg-slate-800'>
-            <div className='flex flex-col w-1/2 max-w-1/5 min-w-96 h-1/2 bg-white/30 border-4 border-white rounded-xl shadow-2xl'>
-                <p className='uppercase mt-10 mx-1 text-zinc-100 font-bold'>Page is still under development :{'('}</p>
-                <p className='uppercase mb-10 text-zinc-100 text-lg font-light'>Last Update: 05/22/2024</p>
-                <div className='flex justify-center'>
-                    <div className='w-full h-1 rounded-xl bg-zinc-100'></div>
+        <div className='relative w-full h-full flex flex-col justify-center items-center bg-gray-700'>
+            <div name='container' className='grid place-items-center w-full md:w-1/2 px-5 my-20'>
+                <div name='header' className='flex flex-row items-center gap-8'>
+                        <h1 className='text-5xl md:text-7xl font-mokeText uppercase text-white inline-block bg-clip-text'>
+                            MOBILE XR
+                        </h1>
                 </div>
-                <div className='flex justify-center items-center my-5 mx-2'>
-                    Navigate to external portfolio site:
+                <div name='divider' className='w-full h-0.5 my-3 rounded-full bg-gradient-to-r from-sky-100 to-gray-400'></div>
+                <div name='description' className='flex justify-self-center w-11/12'>
+                    <p className='text-justify text-base md:text-xl text-stone-100'>
+                    Interactive and engaging experiences designed in Unity to utilize augmented and virtual reality on a mobile device.
+                    </p>
                 </div>
-                <a className='flex justify-center items-center my-5 mx-2' href='https://gunnarvittrup.myportfolio.com/vr-ar'>
-                    <motion.button
-                        whileHover={{
-                            scale: 1.05,
-                            transition: { duration: 0.25, type: 'spring' }
-                        }}
-                        whileTap={{
-                            scale: 0.9,
-                            transition: { duration: 0.25, type: 'spring' }
-                        }}
-                        transition={{ duration: 1 }}
-                        className='flex w-1/2 h-3/4 justify-center items-center bg-zinc-700 border-zinc-100 text-zinc-100'
-                        >
-                            Mobile XR
-                    </motion.button>
-                </a>
+                <div name='subgrid' className='grid grid-cols-1 md:grid-cols-2 gap-2 mt-8 place-items-center'>
+                    <ImageCard image={scene1} />
+                    <ImageCard image={scene2} />
+                </div>
+                <iframe className='relative z-0 my-5 w-full h-[56.5vw] max-h-480 border-4 border-slate-400 rounded-3xl drop-shadow-2xl' src="https://youtube.com/embed/XvI3MEx4WOQ?si=r-2TuLmaYn8-XZcF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div name='subgrid' className='grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center'>
+                    <ImageCard image={ui} />
+                    <ImageCard image={phone} />
+                </div>
+                <iframe className='relative my-5 w-full h-[56.5vw] max-h-480 border-4 border-slate-400 rounded-3xl drop-shadow-2xl' src="https://www.youtube.com/embed/t_WPdDG60fc?si=AunAv1jkBgxiz17R&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div name='subgrid' className='grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center'>
+                    <ImageCard image={cpuUI} />
+                    <ImageCard image={cpu} />
+                </div>
+                <iframe className='relative my-5 w-full h-[56.5vw] max-h-480 border-4 border-slate-400 rounded-3xl drop-shadow-2xl' src="https://www.youtube.com/embed/oCwFrVBds-8?si=pkj7VXYTLlgntHL2&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     )
