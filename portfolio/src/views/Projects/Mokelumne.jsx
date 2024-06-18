@@ -22,9 +22,7 @@ const Mokelumne = () => {
                         and customers though custom functions and components.
                     </p>
                 </div>
-                <div className='flex justify-center my-10 w-full shadow-innerXL drop-shadow-2xl bg-stone-100/50 border-sky-100 border-2 rounded-3xl'>
-                    <iframe className='my-5 w-full h-80 md:w-854 md:h-480' src="https://www.youtube.com/embed/6e2h00Ik_yk?si=SZXMccsTI7E9oPlQ&amp;controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+                <iframe className='my-5 w-full h-[56.5vw] max-h-480 border-4 border-green-700 rounded-3xl drop-shadow-2xl' src="https://www.youtube.com/embed/6e2h00Ik_yk?si=SZXMccsTI7E9oPlQ&amp;controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     )

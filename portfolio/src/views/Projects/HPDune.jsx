@@ -20,9 +20,7 @@ const HPDune = () => {
                     Tool built to parse large directories of JSON files with the intention of persisting and visualizing key firmware metrics for product performance and insight. 
                 </p>
             </div>
-            <div className='flex justify-center my-10 w-full shadow-innerXL drop-shadow-2xl bg-sky-300/30 border-sky-100 border-2 rounded-3xl'>
-                <iframe className='my-5 w-full h-80 md:w-854 md:h-480' src="https://www.youtube.com/embed/737o0cuuU4U?si=i8bexRtfOqGQq7X7&amp;controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+            <iframe className='my-5 w-full h-[56.5vw] max-h-480 border-4 border-emerald-400 rounded-3xl drop-shadow-2xl' src="https://www.youtube.com/embed/737o0cuuU4U?si=i8bexRtfOqGQq7X7&amp;controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" autoPlay referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <div name='subgrid' className='grid grid-cols-2 gap-2 place-items-center'>
 
             </div>
